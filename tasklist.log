@@ -1,0 +1,784 @@
+2020-09-11 00:56:16,552 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 00:56:49,320 | [INFO] | "GET /api/task/ HTTP/1.1" 200 685
+2020-09-11 00:58:27,594 | [INFO] | /home/allan/tasklist/src/tasklist/api/views.py changed, reloading.
+2020-09-11 00:58:27,913 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 00:58:34,375 | [ERROR] | Internal Server Error: /api/task/
+Traceback (most recent call last):
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/allan/tasklist/src/tasklist/api/views.py", line 97, in task_add_list
+    status, context = tasks_list()
+NameError: name 'tasks_list' is not defined
+2020-09-11 00:58:34,377 | [ERROR] | "GET /api/task/ HTTP/1.1" 500 95483
+2020-09-11 01:00:22,775 | [INFO] | /home/allan/tasklist/src/tasklist/api/views.py changed, reloading.
+2020-09-11 01:00:23,072 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 01:01:11,264 | [INFO] | /home/allan/tasklist/src/tasklist/api/urls.py changed, reloading.
+2020-09-11 01:01:11,584 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 01:04:21,280 | [INFO] | /home/allan/tasklist/src/tasklist/api/views.py changed, reloading.
+2020-09-11 01:04:21,592 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 01:04:54,338 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 01:04:54,644 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 01:05:12,125 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/forms.py changed, reloading.
+2020-09-11 01:05:12,445 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 01:07:49,584 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/forms.py changed, reloading.
+2020-09-11 01:07:49,888 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 01:07:54,006 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 01:08:18,516 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 01:08:18,799 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 01:08:27,493 | [INFO] | "POST /api/tag/ HTTP/1.1" 200 54
+2020-09-11 01:08:45,970 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 01:08:46,263 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 01:08:48,450 | [WARNING] | Not Acceptable: /api/tag/
+2020-09-11 01:08:48,450 | [WARNING] | "POST /api/tag/ HTTP/1.1" 406 102
+2020-09-11 01:08:53,808 | [INFO] | "POST /api/tag/ HTTP/1.1" 200 53
+2020-09-11 01:08:59,277 | [WARNING] | Not Acceptable: /api/tag/
+2020-09-11 01:08:59,278 | [WARNING] | "POST /api/tag/ HTTP/1.1" 406 92
+2020-09-11 01:09:29,771 | [INFO] | "GET /api/tag/ HTTP/1.1" 200 274
+2020-09-11 01:09:44,721 | [INFO] | "GET /api/tag/2/ HTTP/1.1" 200 64
+2020-09-11 01:10:07,400 | [INFO] | "PUT /api/tag/2/ HTTP/1.1" 200 109
+2020-09-11 01:10:12,716 | [INFO] | "PUT /api/tag/2/ HTTP/1.1" 200 109
+2020-09-11 01:10:16,083 | [INFO] | "PATCH /api/tag/2/ HTTP/1.1" 200 109
+2020-09-11 01:10:24,935 | [INFO] | "DELETE /api/tag/2/ HTTP/1.1" 200 27
+2020-09-11 01:10:27,510 | [WARNING] | Not Found: /api/tag/2/
+2020-09-11 01:10:27,510 | [WARNING] | "DELETE /api/tag/2/ HTTP/1.1" 404 27
+2020-09-11 09:57:56,297 | [INFO] | "GET /admin/authtoken/token/ HTTP/1.1" 200 7894
+2020-09-11 09:57:56,351 | [INFO] | "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2020-09-11 09:57:56,369 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 09:57:56,379 | [INFO] | "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2020-09-11 09:57:56,382 | [INFO] | "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2020-09-11 09:57:56,386 | [INFO] | "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2020-09-11 09:57:56,386 | [INFO] | "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2020-09-11 09:57:56,387 | [INFO] | "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2020-09-11 09:57:56,387 | [INFO] | "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2020-09-11 09:57:56,394 | [INFO] | "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2020-09-11 09:57:56,398 | [INFO] | "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2020-09-11 09:57:56,399 | [INFO] | "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2020-09-11 09:57:56,400 | [INFO] | "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2020-09-11 09:57:56,403 | [INFO] | "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2020-09-11 09:57:56,425 | [INFO] | "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2020-09-11 09:57:56,462 | [INFO] | "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2020-09-11 09:57:56,520 | [INFO] | "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2020-09-11 09:57:56,523 | [INFO] | "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2020-09-11 09:57:56,545 | [INFO] | "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+2020-09-11 09:57:56,560 | [INFO] | "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2020-09-11 09:57:56,575 | [INFO] | "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2020-09-11 09:57:56,575 | [INFO] | "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2020-09-11 09:57:56,648 | [WARNING] | Not Found: /favicon.ico
+2020-09-11 09:57:56,649 | [WARNING] | "GET /favicon.ico HTTP/1.1" 404 2078
+2020-09-11 09:57:57,296 | [INFO] | "GET /admin/auth/user/ HTTP/1.1" 200 9383
+2020-09-11 09:57:57,328 | [INFO] | "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+2020-09-11 09:57:57,331 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 09:57:58,343 | [INFO] | "GET /admin/tasklist/task/ HTTP/1.1" 200 12873
+2020-09-11 09:57:58,395 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 09:57:58,987 | [INFO] | "GET /admin/tasklist/tag/ HTTP/1.1" 200 9274
+2020-09-11 09:57:59,032 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 09:58:00,615 | [INFO] | "GET /admin/tasklist/list/ HTTP/1.1" 200 9590
+2020-09-11 09:58:00,646 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 11:04:50,588 | [WARNING] | Method Not Allowed: /api/list/
+2020-09-11 11:04:50,589 | [WARNING] | "DELETE /api/list/ HTTP/1.1" 405 43
+2020-09-11 11:04:55,886 | [INFO] | "POST /api/list/ HTTP/1.1" 200 55
+2020-09-11 11:09:15,503 | [INFO] | "GET /api/list/ HTTP/1.1" 200 359
+2020-09-11 11:11:12,481 | [WARNING] | Not Acceptable: /api/list/
+2020-09-11 11:16:35,327 | [WARNING] | Not Found: /api/list/1/
+2020-09-11 11:16:35,327 | [WARNING] | "GET /api/list/1/ HTTP/1.1" 404 28
+2020-09-11 11:16:42,202 | [INFO] | "GET /api/list/3/ HTTP/1.1" 200 70
+2020-09-11 11:21:12,538 | [INFO] | "GET /api/list/3/ HTTP/1.1" 200 70
+2020-09-11 11:40:47,841 | [INFO] | "PUT /api/list/3/ HTTP/1.1" 200 109
+2020-09-11 11:43:31,924 | [INFO] | "PUT /api/list/3/ HTTP/1.1" 200 125
+2020-09-11 11:45:05,142 | [INFO] | "PATCH /api/list/3/ HTTP/1.1" 200 127
+2020-09-11 12:01:16,109 | [WARNING] | Not Acceptable: /api/task/
+2020-09-11 12:01:16,109 | [WARNING] | "POST /api/task/ HTTP/1.1" 406 146
+2020-09-11 12:01:30,084 | [INFO] | "POST /api/task/ HTTP/1.1" 200 55
+2020-09-11 12:01:44,386 | [INFO] | "GET /api/task/ HTTP/1.1" 200 1084
+2020-09-11 12:02:37,180 | [INFO] | "GET /api/task/2/ HTTP/1.1" 200 260
+2020-09-11 12:02:53,196 | [INFO] | "GET /api/task/ HTTP/1.1" 200 1084
+2020-09-11 12:03:05,375 | [INFO] | "GET /api/task/2/ HTTP/1.1" 200 260
+2020-09-11 12:09:30,033 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 12:09:30,393 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 12:09:37,186 | [INFO] | "GET /api/task/2/ HTTP/1.1" 200 260
+2020-09-11 12:10:45,730 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 12:10:46,059 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 12:10:47,175 | [ERROR] | Internal Server Error: /api/task/2/
+Traceback (most recent call last):
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/allan/tasklist/src/tasklist/api/views.py", line 116, in task_view_update_delete
+    status, context = task_view(task_id)
+  File "/home/allan/tasklist/src/tasklist/tasklist/utils.py", line 136, in task_view
+    'id': task.id,
+AttributeError: 'dict' object has no attribute 'id'
+2020-09-11 12:10:47,177 | [ERROR] | "GET /api/task/2/ HTTP/1.1" 500 100146
+2020-09-11 12:11:00,573 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 12:11:00,936 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 12:11:01,271 | [INFO] | "GET /api/task/2/ HTTP/1.1" 200 372
+2020-09-11 12:11:33,613 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 12:11:33,984 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 12:11:43,298 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 12:11:43,831 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 12:11:51,047 | [INFO] | "GET /admin/tasklist/tag/ HTTP/1.1" 200 9274
+2020-09-11 12:11:51,091 | [INFO] | "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2020-09-11 12:11:51,094 | [INFO] | "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2020-09-11 12:11:51,094 | [INFO] | "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2020-09-11 12:11:51,115 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 12:11:51,119 | [INFO] | "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2020-09-11 12:11:51,123 | [INFO] | "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2020-09-11 12:11:51,126 | [INFO] | "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2020-09-11 12:11:51,132 | [INFO] | "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2020-09-11 12:11:51,133 | [INFO] | "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2020-09-11 12:11:51,134 | [INFO] | "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2020-09-11 12:11:51,134 | [INFO] | "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2020-09-11 12:11:51,136 | [INFO] | "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2020-09-11 12:11:51,137 | [INFO] | "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2020-09-11 12:11:51,191 | [INFO] | "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2020-09-11 12:11:51,203 | [INFO] | "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2020-09-11 12:11:51,210 | [INFO] | "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+2020-09-11 12:11:51,284 | [INFO] | "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2020-09-11 12:11:51,285 | [INFO] | "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2020-09-11 12:11:51,334 | [INFO] | "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2020-09-11 12:11:51,339 | [INFO] | "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2020-09-11 12:11:51,339 | [INFO] | "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2020-09-11 12:11:51,884 | [INFO] | "GET /admin/tasklist/task/ HTTP/1.1" 200 13612
+2020-09-11 12:11:51,920 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 12:11:54,570 | [INFO] | "GET /admin/tasklist/task/2/change/ HTTP/1.1" 200 12586
+2020-09-11 12:11:54,616 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 12:11:54,623 | [INFO] | "GET /static/admin/css/autocomplete.css HTTP/1.1" 304 0
+2020-09-11 12:11:54,624 | [INFO] | "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+2020-09-11 12:11:54,626 | [INFO] | "GET /static/admin/css/vendor/select2/select2.css HTTP/1.1" 304 0
+2020-09-11 12:11:54,627 | [INFO] | "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+2020-09-11 12:11:54,628 | [INFO] | "GET /static/admin/js/vendor/select2/select2.full.js HTTP/1.1" 304 0
+2020-09-11 12:11:54,629 | [INFO] | "GET /static/admin/js/autocomplete.js HTTP/1.1" 304 0
+2020-09-11 12:11:54,822 | [INFO] | "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+2020-09-11 12:11:54,824 | [INFO] | "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+2020-09-11 12:12:07,024 | [INFO] | "POST /admin/tasklist/task/2/change/ HTTP/1.1" 200 12729
+2020-09-11 12:12:07,068 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 12:12:12,611 | [INFO] | "GET /api/task/2/ HTTP/1.1" 200 366
+2020-09-11 12:12:36,388 | [INFO] | "GET /admin/tasklist/tag/autocomplete/ HTTP/1.1" 200 141
+2020-09-11 12:12:37,562 | [INFO] | "POST /admin/tasklist/task/2/change/ HTTP/1.1" 302 0
+2020-09-11 12:12:37,643 | [INFO] | "GET /admin/tasklist/task/2/change/ HTTP/1.1" 200 12869
+2020-09-11 12:12:37,739 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 12:12:40,475 | [INFO] | "GET /api/task/2/ HTTP/1.1" 200 366
+2020-09-11 12:27:03,509 | [INFO] | "GET /api/task/2/ HTTP/1.1" 200 366
+2020-09-11 12:27:45,755 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 12:27:46,076 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 12:27:47,177 | [ERROR] | Internal Server Error: /api/task/2/
+Traceback (most recent call last):
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/allan/tasklist/src/tasklist/api/views.py", line 116, in task_view_update_delete
+    status, context = task_view(task_id)
+  File "/home/allan/tasklist/src/tasklist/tasklist/utils.py", line 145, in task_view
+    'remind_me_on': task.remind_me_on.astimezone(settings.TIME_ZONE).strftime('%Y-%m-%d %H:%M:%S'),
+TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'str'
+2020-09-11 12:27:47,179 | [ERROR] | "GET /api/task/2/ HTTP/1.1" 500 100260
+2020-09-11 12:27:48,266 | [ERROR] | Internal Server Error: /api/task/2/
+Traceback (most recent call last):
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/allan/tasklist/src/tasklist/api/views.py", line 116, in task_view_update_delete
+    status, context = task_view(task_id)
+  File "/home/allan/tasklist/src/tasklist/tasklist/utils.py", line 145, in task_view
+    'remind_me_on': task.remind_me_on.astimezone(settings.TIME_ZONE).strftime('%Y-%m-%d %H:%M:%S'),
+TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'str'
+2020-09-11 12:27:48,267 | [ERROR] | "GET /api/task/2/ HTTP/1.1" 500 100260
+2020-09-11 12:28:20,896 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 12:28:21,317 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 12:30:20,852 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 12:30:21,600 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 12:30:45,332 | [ERROR] | Internal Server Error: /api/task/2/
+Traceback (most recent call last):
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/allan/tasklist/src/tasklist/api/views.py", line 116, in task_view_update_delete
+    status, context = task_view(task_id)
+  File "/home/allan/tasklist/src/tasklist/tasklist/utils.py", line 135, in task_view
+    if task:
+TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'str'
+2020-09-11 12:30:45,333 | [ERROR] | "GET /api/task/2/ HTTP/1.1" 500 100054
+2020-09-11 12:30:50,278 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 12:30:50,677 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 12:30:56,802 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 12:30:57,257 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 12:30:58,176 | [INFO] | "GET /api/task/2/ HTTP/1.1" 200 366
+2020-09-11 12:31:12,767 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 12:31:13,222 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 12:32:33,652 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 12:32:33,987 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 12:33:10,760 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 12:33:11,111 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 12:34:57,032 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 12:36:42,769 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 12:36:42,770 | [WARNING] | "PUT /api/task/2/ HTTP/1.1" 406 124
+2020-09-11 12:37:05,533 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 12:37:05,533 | [WARNING] | "PUT /api/task/2/ HTTP/1.1" 406 92
+2020-09-11 12:37:30,552 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 12:37:30,552 | [WARNING] | "PUT /api/task/2/ HTTP/1.1" 406 92
+2020-09-11 12:37:37,149 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 12:37:37,150 | [WARNING] | "PUT /api/task/2/ HTTP/1.1" 406 146
+2020-09-11 12:37:41,236 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 12:37:41,237 | [WARNING] | "PUT /api/task/2/ HTTP/1.1" 406 92
+2020-09-11 12:37:46,533 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 12:37:46,534 | [WARNING] | "PUT /api/task/2/ HTTP/1.1" 406 92
+2020-09-11 12:37:51,795 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 12:37:51,796 | [WARNING] | "PUT /api/task/2/ HTTP/1.1" 406 92
+2020-09-11 12:37:54,865 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 12:37:54,866 | [WARNING] | "PUT /api/task/2/ HTTP/1.1" 406 92
+2020-09-11 12:37:57,295 | [INFO] | "PUT /api/task/2/ HTTP/1.1" 200 298
+2020-09-11 12:38:00,024 | [INFO] | "PUT /api/task/2/ HTTP/1.1" 200 298
+2020-09-11 12:38:01,802 | [INFO] | "PUT /api/task/2/ HTTP/1.1" 200 298
+2020-09-11 12:38:02,336 | [INFO] | "PUT /api/task/2/ HTTP/1.1" 200 298
+2020-09-11 12:38:09,834 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 12:38:18,867 | [INFO] | "PUT /api/task/2/ HTTP/1.1" 200 298
+2020-09-11 13:18:56,858 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 13:42:00,698 | [INFO] | "POST /api/tag/ HTTP/1.1" 200 53
+2020-09-11 13:48:53,979 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 13:48:54,452 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 13:48:57,985 | [INFO] | "PUT /api/task/2/ HTTP/1.1" 200 298
+2020-09-11 13:49:03,477 | [INFO] | "GET /api/task/2/ HTTP/1.1" 200 350
+2020-09-11 13:49:15,062 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 13:49:15,428 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 13:49:16,155 | [INFO] | "GET /api/task/2/ HTTP/1.1" 200 362
+2020-09-11 13:49:46,215 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 13:49:46,551 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 13:49:48,146 | [ERROR] | Internal Server Error: /api/task/2/
+Traceback (most recent call last):
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/allan/tasklist/src/tasklist/api/views.py", line 146, in task_view_update_delete
+    return JsonResponse(context, safe=False, status=status)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/http/response.py", line 567, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/serializers/json.py", line 105, in default
+    return super().default(o)
+  File "/usr/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type QuerySet is not JSON serializable
+2020-09-11 13:49:48,147 | [ERROR] | "GET /api/task/2/ HTTP/1.1" 500 126897
+2020-09-11 13:52:08,895 | [INFO] | "GET /admin/tasklist/task/ HTTP/1.1" 200 13667
+2020-09-11 13:52:08,994 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 13:52:10,508 | [INFO] | "GET /admin/tasklist/task/2/change/ HTTP/1.1" 200 12618
+2020-09-11 13:52:10,564 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 13:52:11,865 | [INFO] | "GET /admin/tasklist/tag/autocomplete/ HTTP/1.1" 200 171
+2020-09-11 13:52:13,772 | [INFO] | "POST /admin/tasklist/task/2/change/ HTTP/1.1" 302 0
+2020-09-11 13:52:13,851 | [INFO] | "GET /admin/tasklist/task/2/change/ HTTP/1.1" 200 12898
+2020-09-11 13:52:13,893 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 13:53:00,738 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 13:53:01,129 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 13:53:03,758 | [INFO] | "GET /api/task/2/ HTTP/1.1" 200 497
+2020-09-11 13:55:29,629 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 13:55:29,629 | [WARNING] | "PUT /api/task/2/ HTTP/1.1" 406 92
+2020-09-11 13:55:33,646 | [INFO] | "PUT /api/task/2/ HTTP/1.1" 200 298
+2020-09-11 13:55:40,311 | [INFO] | "PUT /api/task/2/ HTTP/1.1" 200 298
+2020-09-11 13:55:57,451 | [INFO] | "PUT /api/task/2/ HTTP/1.1" 200 298
+2020-09-11 13:56:05,993 | [INFO] | "GET /api/task/2/ HTTP/1.1" 200 497
+2020-09-11 13:56:15,551 | [INFO] | "PUT /api/task/2/ HTTP/1.1" 200 298
+2020-09-11 13:57:26,038 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/forms.py changed, reloading.
+2020-09-11 13:57:26,352 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 13:57:48,435 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 13:57:58,574 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 13:57:58,574 | [WARNING] | "PUT /api/task/2/ HTTP/1.1" 406 136
+2020-09-11 13:58:15,558 | [INFO] | "GET /admin/tasklist/task/ HTTP/1.1" 200 13667
+2020-09-11 13:58:15,623 | [INFO] | "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2020-09-11 13:58:15,626 | [INFO] | "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+2020-09-11 13:58:15,629 | [INFO] | "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2020-09-11 13:58:15,634 | [INFO] | "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2020-09-11 13:58:15,651 | [INFO] | "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2020-09-11 13:58:15,659 | [INFO] | "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2020-09-11 13:58:15,662 | [INFO] | "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2020-09-11 13:58:15,668 | [INFO] | "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2020-09-11 13:58:15,671 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 13:58:15,674 | [INFO] | "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+2020-09-11 13:58:15,681 | [INFO] | "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2020-09-11 13:58:15,683 | [INFO] | "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2020-09-11 13:58:15,684 | [INFO] | "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2020-09-11 13:58:15,688 | [INFO] | "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2020-09-11 13:58:15,710 | [INFO] | "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+2020-09-11 13:58:15,710 | [INFO] | "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+2020-09-11 13:58:15,746 | [INFO] | "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2020-09-11 13:58:15,759 | [INFO] | "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2020-09-11 13:58:15,761 | [INFO] | "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2020-09-11 13:58:15,763 | [INFO] | "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2020-09-11 13:58:15,763 | [INFO] | "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2020-09-11 13:58:17,676 | [INFO] | "GET /admin/tasklist/task/ HTTP/1.1" 200 13667
+2020-09-11 13:58:17,721 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 13:58:20,568 | [INFO] | "GET /admin/tasklist/tag/ HTTP/1.1" 200 9565
+2020-09-11 13:58:20,618 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 13:58:24,444 | [INFO] | "PUT /api/task/2/ HTTP/1.1" 200 298
+2020-09-11 14:07:52,575 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/forms.py changed, reloading.
+2020-09-11 14:07:53,020 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:08:18,395 | [WARNING] | Not Acceptable: /api/task/
+2020-09-11 14:08:18,419 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 14:08:18,452 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 14:09:35,714 | [WARNING] | Not Acceptable: /api/task/
+2020-09-11 14:09:35,715 | [WARNING] | "POST /api/task/ HTTP/1.1" 406 204
+2020-09-11 14:09:50,060 | [WARNING] | Not Acceptable: /api/task/
+2020-09-11 14:09:50,060 | [WARNING] | "POST /api/task/ HTTP/1.1" 406 92
+2020-09-11 14:17:16,224 | [WARNING] | Not Acceptable: /api/task/
+2020-09-11 14:17:16,251 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 14:17:16,299 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 14:18:16,941 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 14:18:16,978 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 14:18:59,122 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 14:20:18,125 | [INFO] | "GET /api/task/2/ HTTP/1.1" 200 496
+2020-09-11 14:20:57,455 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 14:23:08,186 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 14:24:46,145 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 14:25:48,615 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 14:26:41,280 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 14:27:50,157 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 14:30:35,279 | [INFO] | "GET /admin/tasklist/task/ HTTP/1.1" 200 13667
+2020-09-11 14:30:35,316 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+2020-09-11 14:36:10,366 | [WARNING] | Not Acceptable: /api/task/1/
+2020-09-11 14:36:46,317 | [WARNING] | Method Not Allowed: /api/task/
+2020-09-11 14:36:46,317 | [WARNING] | "PATCH /api/task/ HTTP/1.1" 405 42
+2020-09-11 14:37:17,406 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 14:37:17,406 | [WARNING] | "PATCH /api/task/2/ HTTP/1.1" 406 92
+2020-09-11 14:38:16,082 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:38:16,485 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:39:08,721 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 14:39:08,722 | [WARNING] | "PATCH /api/task/2/ HTTP/1.1" 406 96
+2020-09-11 14:39:29,245 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:39:29,642 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:40:39,916 | [ERROR] | Internal Server Error: /api/task/2/
+Traceback (most recent call last):
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/allan/tasklist/src/tasklist/api/views.py", line 144, in task_view_update_delete
+    status, context = task_update(task_id, request_body, partial=True)
+  File "/home/allan/tasklist/src/tasklist/tasklist/utils.py", line 165, in task_update
+    task = Task.objects.select_related('tag').filter(id=task_id).first()
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/db/models/query.py", line 678, in first
+    for obj in (self if self.ordered else self.order_by('pk'))[:1]:
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/db/models/query.py", line 287, in __iter__
+    self._fetch_all()
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/db/models/query.py", line 1303, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1143, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 498, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 55, in pre_sql_setup
+    self.setup_query()
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 46, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select()
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 248, in get_select
+    related_klass_infos = self.get_related_selections(select)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 963, in get_related_selections
+    raise FieldError(
+django.core.exceptions.FieldError: Invalid field name(s) given in select_related: 'tag'. Choices are: list
+2020-09-11 14:40:39,918 | [ERROR] | "PATCH /api/task/2/ HTTP/1.1" 500 148242
+2020-09-11 14:40:51,373 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:40:51,828 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:40:57,738 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:40:58,177 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:40:58,519 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 14:40:58,520 | [WARNING] | "PATCH /api/task/2/ HTTP/1.1" 406 172
+2020-09-11 14:41:20,494 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 14:41:20,495 | [WARNING] | "PATCH /api/task/2/ HTTP/1.1" 406 172
+2020-09-11 14:41:22,676 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 14:41:22,676 | [WARNING] | "PATCH /api/task/2/ HTTP/1.1" 406 172
+2020-09-11 14:41:24,761 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:41:25,212 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:42:26,289 | [WARNING] | Not Acceptable: /api/task/2/
+2020-09-11 14:42:26,289 | [WARNING] | "PATCH /api/task/2/ HTTP/1.1" 406 96
+2020-09-11 14:42:45,128 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:42:45,671 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:42:49,984 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:42:50,381 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:42:50,818 | [ERROR] | Internal Server Error: /api/task/2/
+Traceback (most recent call last):
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/allan/tasklist/src/tasklist/api/views.py", line 144, in task_view_update_delete
+    status, context = task_update(task_id, request_body, partial=True)
+  File "/home/allan/tasklist/src/tasklist/tasklist/utils.py", line 177, in task_update
+    task_dict.update([entry for entry in task.tags.all().values()])
+ValueError: dictionary update sequence element #0 has length 3; 2 is required
+2020-09-11 14:42:50,819 | [ERROR] | "PATCH /api/task/2/ HTTP/1.1" 500 101463
+2020-09-11 14:42:51,744 | [ERROR] | Internal Server Error: /api/task/2/
+Traceback (most recent call last):
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/allan/tasklist/src/tasklist/api/views.py", line 144, in task_view_update_delete
+    status, context = task_update(task_id, request_body, partial=True)
+  File "/home/allan/tasklist/src/tasklist/tasklist/utils.py", line 177, in task_update
+    task_dict.update([entry for entry in task.tags.all().values()])
+ValueError: dictionary update sequence element #0 has length 3; 2 is required
+2020-09-11 14:42:51,744 | [ERROR] | "PATCH /api/task/2/ HTTP/1.1" 500 101463
+2020-09-11 14:43:06,852 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:43:07,161 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:43:23,972 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:43:24,404 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:44:07,616 | [ERROR] | Internal Server Error: /api/task/2/
+Traceback (most recent call last):
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/allan/tasklist/src/tasklist/api/views.py", line 144, in task_view_update_delete
+    status, context = task_update(task_id, request_body, partial=True)
+  File "/home/allan/tasklist/src/tasklist/tasklist/utils.py", line 176, in task_update
+    task_dict.update({'list': task_dict.get('list_id')})
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/db/models/query.py", line 841, in values
+    clone = self._values(*fields, **expressions)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/db/models/query.py", line 836, in _values
+    clone.query.set_values(fields)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/db/models/sql/query.py", line 2172, in set_values
+    self.add_fields(field_names, True)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1863, in add_fields
+    join_info = self.setup_joins(name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m)
+AttributeError: 'builtin_function_or_method' object has no attribute 'split'
+2020-09-11 14:44:07,618 | [ERROR] | "PATCH /api/task/2/ HTTP/1.1" 500 119695
+2020-09-11 14:44:16,392 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:44:16,835 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:44:25,168 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:44:25,615 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:44:26,519 | [ERROR] | Internal Server Error: /api/task/2/
+Traceback (most recent call last):
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/allan/tasklist/src/tasklist/api/views.py", line 144, in task_view_update_delete
+    status, context = task_update(task_id, request_body, partial=True)
+  File "/home/allan/tasklist/src/tasklist/tasklist/utils.py", line 177, in task_update
+    task_dict.update([entry.id for entry in task.tags.all()])
+TypeError: cannot convert dictionary update sequence element #0 to a sequence
+2020-09-11 14:44:26,520 | [ERROR] | "PATCH /api/task/2/ HTTP/1.1" 500 101449
+2020-09-11 14:44:54,323 | [ERROR] | Internal Server Error: /api/task/2/
+Traceback (most recent call last):
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/allan/tasklist/src/tasklist/api/views.py", line 144, in task_view_update_delete
+    status, context = task_update(task_id, request_body, partial=True)
+  File "/home/allan/tasklist/src/tasklist/tasklist/utils.py", line 177, in task_update
+    task_dict.update([entry.id for entry in task.tags.all()])
+TypeError: cannot convert dictionary update sequence element #0 to a sequence
+2020-09-11 14:44:54,324 | [ERROR] | "PATCH /api/task/2/ HTTP/1.1" 500 101416
+2020-09-11 14:44:54,368 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:44:54,880 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:45:08,227 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:45:15,080 | [ERROR] | Internal Server Error: /api/task/2/
+Traceback (most recent call last):
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/allan/tasklist/src/tasklist/api/views.py", line 144, in task_view_update_delete
+    status, context = task_update(task_id, request_body, partial=True)
+  File "/home/allan/tasklist/src/tasklist/tasklist/utils.py", line 177, in task_update
+    task_dict.update([entry.id for entry in task.tags.all()])
+TypeError: cannot convert dictionary update sequence element #0 to a sequence
+2020-09-11 14:45:15,082 | [ERROR] | "PATCH /api/task/2/ HTTP/1.1" 500 101416
+2020-09-11 14:45:34,922 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:45:35,347 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:45:54,665 | [ERROR] | Internal Server Error: /api/task/2/
+Traceback (most recent call last):
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/allan/tasklist/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/allan/tasklist/src/tasklist/api/views.py", line 144, in task_view_update_delete
+    status, context = task_update(task_id, request_body, partial=True)
+  File "/home/allan/tasklist/src/tasklist/tasklist/utils.py", line 176, in task_update
+    task_dict.update({'list': task_dict.get('list_id')})
+TypeError: cannot convert dictionary update sequence element #0 to a sequence
+2020-09-11 14:45:54,666 | [ERROR] | "PATCH /api/task/2/ HTTP/1.1" 500 101881
+2020-09-11 14:46:21,337 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:46:25,305 | [INFO] | "PATCH /api/task/2/ HTTP/1.1" 200 298
+2020-09-11 14:46:32,597 | [INFO] | "PATCH /api/task/2/ HTTP/1.1" 200 299
+2020-09-11 14:48:39,400 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:48:39,761 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:49:20,534 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:49:20,865 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:49:24,195 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:49:24,559 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:50:21,499 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:50:21,811 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:51:33,995 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:51:34,380 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:51:44,821 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:51:45,199 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:51:54,597 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:51:54,971 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:52:02,373 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:52:02,752 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:52:24,296 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:52:24,612 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:54:53,732 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/utils.py changed, reloading.
+2020-09-11 14:54:54,076 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:55:52,101 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/settings.py changed, reloading.
+2020-09-11 14:55:52,451 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:56:54,611 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/settings.py changed, reloading.
+2020-09-11 14:56:55,021 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:58:21,450 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:58:38,688 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 14:58:50,971 | [INFO] | "GET /admin/tasklist/task/ HTTP/1.1" 200 13874
+2020-09-11 14:58:51,168 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 7239
+2020-09-11 14:58:53,532 | [INFO] | "GET /admin/tasklist/task/ HTTP/1.1" 200 13874
+2020-09-11 14:58:53,575 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 7239
+2020-09-11 15:04:42,052 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 15:05:21,812 | [INFO] | "GET /admin/tasklist/task/ HTTP/1.1" 200 13969
+2020-09-11 15:05:21,868 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 7239
+2020-09-11 15:07:47,231 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 15:09:07,882 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 15:09:14,633 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 15:09:38,392 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 15:09:50,211 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 15:10:10,331 | [INFO] | "GET /admin/tasklist/list/ HTTP/1.1" 200 10108
+2020-09-11 15:10:10,821 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 7239
+2020-09-11 15:10:12,825 | [INFO] | "GET /admin/tasklist/tag/ HTTP/1.1" 200 9758
+2020-09-11 15:10:12,869 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 7239
+2020-09-11 15:10:14,603 | [INFO] | "GET /admin/tasklist/task/ HTTP/1.1" 200 13969
+2020-09-11 15:10:14,635 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 7239
+2020-09-11 15:10:53,619 | [INFO] | "PATCH /api/task/2/ HTTP/1.1" 200 299
+2020-09-11 15:10:56,067 | [INFO] | "PATCH /api/task/2/ HTTP/1.1" 200 299
+2020-09-11 15:12:01,498 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 15:13:30,484 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/models.py changed, reloading.
+2020-09-11 15:13:30,815 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 15:13:34,472 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 15:13:36,058 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 15:14:43,983 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/migrations/0001_initial.py changed, reloading.
+2020-09-11 15:14:44,303 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 15:16:21,886 | [INFO] | "GET /admin/tasklist/list/ HTTP/1.1" 302 0
+2020-09-11 15:16:21,934 | [INFO] | "GET /admin/login/?next=/admin/tasklist/list/ HTTP/1.1" 200 2258
+2020-09-11 15:16:23,218 | [INFO] | "POST /admin/login/?next=/admin/tasklist/list/ HTTP/1.1" 302 0
+2020-09-11 15:16:23,254 | [INFO] | "GET /admin/tasklist/list/ HTTP/1.1" 200 7300
+2020-09-11 15:16:23,290 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 7239
+2020-09-11 15:16:24,466 | [INFO] | "GET /admin/tasklist/tag/ HTTP/1.1" 200 7288
+2020-09-11 15:16:24,514 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 7239
+2020-09-11 15:16:25,569 | [INFO] | "GET /admin/tasklist/tag/add/ HTTP/1.1" 200 6847
+2020-09-11 15:16:25,637 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 7239
+2020-09-11 15:16:35,031 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/models.py changed, reloading.
+2020-09-11 15:16:35,384 | [INFO] | Watching for file changes with StatReloader
+2020-09-11 15:16:42,573 | [INFO] | "GET /admin/tasklist/tag/ HTTP/1.1" 200 7288
+2020-09-11 15:16:42,622 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 7239
+2020-09-11 15:16:43,888 | [INFO] | "GET /admin/tasklist/tag/ HTTP/1.1" 200 7288
+2020-09-11 15:16:43,956 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 7239
+2020-09-11 15:16:44,567 | [INFO] | "GET /admin/tasklist/tag/add/ HTTP/1.1" 200 7324
+2020-09-11 15:16:44,618 | [INFO] | "GET /admin/jsi18n/ HTTP/1.1" 200 7239
+2020-09-11 15:17:01,047 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/migrations/0001_initial.py changed, reloading.
+2020-09-11 15:17:01,385 | [INFO] | Watching for file changes with StatReloader

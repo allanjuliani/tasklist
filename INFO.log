@@ -1,0 +1,4 @@
+2020-09-11 00:54:49,756 | [WARNING] | Method Not Allowed: /api/task/
+2020-09-11 00:54:49,757 | [WARNING] | "PATCH /api/task/ HTTP/1.1" 405 42
+2020-09-11 00:55:02,476 | [INFO] | "GET /api/task/ HTTP/1.1" 200 685
+2020-09-11 00:56:16,191 | [INFO] | /home/allan/tasklist/src/tasklist/tasklist/settings.py changed, reloading.

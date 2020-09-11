@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-11 15:04-0300\n"
+"PO-Revision-Date: 2020-09-11 15:04-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.3\n"
+
+#: api/apps.py:7
+msgid "API"
+msgstr ""
+
+#: api/tests.py:115 api/tests.py:139 tasklist/utils.py:67
+#, python-brace-format
+msgid "List {list_id} updated"
+msgstr "Lista {list_id} atualizada"
+
+#: api/tests.py:223 api/tests.py:247 tasklist/utils.py:138
+#, python-brace-format
+msgid "Tag {tag_id} updated"
+msgstr "Tag {tag_id} atualizada"
+
+#: api/tests.py:391 api/tests.py:429 tasklist/utils.py:257
+#, python-brace-format
+msgid "Task {task_id} updated"
+msgstr "Tarefa {task_id} atualizada"
+
+#: api/views.py:29 api/views.py:66 api/views.py:89 api/views.py:126
+#: api/views.py:140 api/views.py:163 api/views.py:200
+msgid "Invalid body format. Must be a valid Json"
+msgstr "Conteúdo inválido. Precisa ser um Json válido"
+
+#: tasklist/admin.py:8
+msgid "Home"
+msgstr "Início"
+
+#: tasklist/admin.py:9
+msgid "Task List Administration"
+msgstr "Administração do Lista de Terefas"
+
+#: tasklist/admin.py:38 tasklist/models.py:11 tasklist/models.py:55
+msgid "List"
+msgstr "Lista"
+
+#: tasklist/apps.py:7
+msgid "Task list"
+msgstr "Lista de Tarefas"
+
+#: tasklist/models.py:6
+msgid "Name"
+msgstr "Nome"
+
+#: tasklist/models.py:7 tasklist/models.py:20 tasklist/models.py:64
+msgid "Created"
+msgstr "Criado"
+
+#: tasklist/models.py:12
+msgid "Lists"
+msgstr "Listas"
+
+#: tasklist/models.py:19 tasklist/models.py:56
+msgid "Title"
+msgstr "Título"
+
+#: tasklist/models.py:24
+msgid "Tag"
+msgstr ""
+
+#: tasklist/models.py:25
+msgid "Tags"
+msgstr ""
+
+#: tasklist/models.py:42
+msgid "Low"
+msgstr "Baixo"
+
+#: tasklist/models.py:43
+msgid "Medium"
+msgstr "Médio"
+
+#: tasklist/models.py:44
+msgid "High"
+msgstr "Alto"
+
+#: tasklist/models.py:47
+msgid "Indoor"
+msgstr "Dentro"
+
+#: tasklist/models.py:48
+msgid "Outdoor"
+msgstr "Fora"
+
+#: tasklist/models.py:51
+msgid "Open"
+msgstr "Aberto"
+
+#: tasklist/models.py:52
+msgid "Doing"
+msgstr "Fazendo"
+
+#: tasklist/models.py:53
+msgid "Done"
+msgstr "Feito"
+
+#: tasklist/models.py:57
+msgid "Notes"
+msgstr "Notas"
+
+#: tasklist/models.py:58
+msgid "Priority"
+msgstr "Prioridade"
+
+#: tasklist/models.py:59
+msgid "Remind me on"
+msgstr "Me lembrar em"
+
+#: tasklist/models.py:60
+msgid "Activity Type"
+msgstr "Tipo de Atividade"
+
+#: tasklist/models.py:62
+msgid "Status"
+msgstr ""
+
+#: tasklist/models.py:65
+msgid "Updated"
+msgstr "Atualizado"
+
+#: tasklist/models.py:73
+msgid "Task"
+msgstr "Tarefa"
+
+#: tasklist/models.py:74
+msgid "Tasks"
+msgstr "Tarefas"
+
+#: tasklist/utils.py:15
+msgid "New list created"
+msgstr "Nova lista criada"
+
+#: tasklist/utils.py:36
+#, python-brace-format
+msgid "List {list_id} deleted"
+msgstr "Lista {list_id} deletada"
+
+#: tasklist/utils.py:39 tasklist/utils.py:49 tasklist/utils.py:75
+msgid "List not found"
+msgstr "Lista não encontrada"
+
+#: tasklist/utils.py:86
+msgid "New Tag created"
+msgstr "Nova tag criada"
+
+#: tasklist/utils.py:107
+#, python-brace-format
+msgid "Tag {tag_id} deleted"
+msgstr "Tag {tag_id} deletada"
+
+#: tasklist/utils.py:110 tasklist/utils.py:120 tasklist/utils.py:146
+msgid "Tag not found"
+msgstr "Tag não encontrada"
+
+#: tasklist/utils.py:157
+msgid "New task created"
+msgstr "Nova tarefa criada"
+
+#: tasklist/utils.py:196
+#, python-brace-format
+msgid "Task {task_id} deleted"
+msgstr "Tarefa {task_id} deletada"
+
+#: tasklist/utils.py:199 tasklist/utils.py:225 tasklist/utils.py:265
+msgid "Task not found"
+msgstr "Tarefa não encontrada"
