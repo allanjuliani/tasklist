@@ -46,17 +46,28 @@ Comment the lines 83 to 86 and uncomment the lines 88 to 97 on settings.py. Fill
 
 `./manage.py test`
 
+or
+
+`make test`
+
 #### Running the application
 
 `./manage.py runserver 0.0.0.0:8000` 
 
 or, start in english
 
-`make start_en`
+`make start` 
 
 start in portuguese
 
 `make start_br`
+
+to stop
+
+`make stop`
+
+#### Logging
+`tail -f tasklist.log`
 
 #### Admin URL to access on browser
 `http://localhost:8000/admin/`
@@ -96,7 +107,7 @@ Authorization: Token [TOKEN_GENERATED]
 Content-Type: application/json
 
 {
-    "name": "The New Name",
+    "name": "The New Name"
 }
 
 ```
@@ -221,6 +232,3 @@ DELETE /api/product/[task_id]/
 Authorization: Token [TOKEN_GENERATED]
 Content-Type: application/json
 ```
-
-## Logging
-`tail -f tasklist.log`
