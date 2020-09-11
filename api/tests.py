@@ -1,6 +1,5 @@
 import pytz
-from django.conf import settings
-from django.utils.timezone import make_aware
+
 from rest_framework import status
 from rest_framework.authtoken.models import Token
 from rest_framework.test import APITestCase
@@ -8,6 +7,7 @@ from rest_framework.test import APITestCase
 from django.contrib.auth.models import User
 from django.urls import reverse
 from django.utils.datetime_safe import datetime
+from django.utils.timezone import make_aware
 from django.utils.translation import gettext as _
 
 from tasklist.models import List, Task, Tag
