@@ -21,4 +21,5 @@ class TagForm(forms.ModelForm):
     class Meta:
         model = Tag
         widgets = {}
+        exclude = ('count',)
         fields = ('name',)

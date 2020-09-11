@@ -228,7 +228,6 @@ def task_view(task_id):
 def task_update(task_id, request_body, partial=False):
     # Load task
     task = Task.objects.select_related('list').filter(id=task_id).first()
-
     # If find the task
     if task:
         # If is partial, create a new list with task dict

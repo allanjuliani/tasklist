@@ -21,7 +21,7 @@ class ListAdmin(admin.ModelAdmin):
 
 @admin.register(Tag)
 class TagAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'created')
+    list_display = ('id', 'name', 'count', 'created')
     list_display_links = ('id',)
     list_filter = ('created',)
     list_per_page = 20

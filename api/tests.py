@@ -189,7 +189,7 @@ class ApiTest(APITestCase):
     def test_tag_load(self):
         """
         GET /api/tag/1/
-        response 200 {'id': 1, 'name': 'Tag A', 'created': '2020-09-11T17:27:50.086Z'}
+        response 200 {'id': 1, 'name': 'Tag A', 'count': 1, 'created': '2020-09-11T17:27:50.086Z'}
         """
         print("\nTest Tag load")
         url = reverse('tag-view-update-delete', args=(self.tag_base.id,))
@@ -198,6 +198,7 @@ class ApiTest(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.json(), {
             'id': self.tag_base.id,
+            'count': Task.objects.filter(tags=self.tag_base).count(),
             'name': self.tag_base.name,
             'created': f"{self.tag_base.created.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3]}Z"
         })
@@ -209,6 +210,7 @@ class ApiTest(APITestCase):
         response 200 {'detail': 'Tag 1 updated', 'data': {
             'id': 1,
             'name': 'New list name fully updated',
+            'count': 1,
             'created': '2020-09-11T00:03:10.788Z'}}
         """
         print("\nTest Tag full update")
@@ -223,6 +225,7 @@ class ApiTest(APITestCase):
         self.assertEqual(response.json(), {'detail': _(f'Tag {tag_id} updated'), 'data': {
             'id': self.tag_base.id,
             'name': data.get('name'),
+            'count': Task.objects.filter(tags=self.tag_base).count(),
             'created': f"{datetime.strftime(self.tag_base.created, '%Y-%m-%dT%H:%M:%S.%f')[:-3]}Z"
         }})
 
@@ -233,6 +236,7 @@ class ApiTest(APITestCase):
         response 200 {'detail': 'Tag 1 updated', 'data': {
             'id': 1,
             'name': 'New list name partial updated',
+            'count': 1,
             'created': '2020-09-11T00:03:10.788Z'}}
         """
         print("\nTest Tag partial update")
@@ -247,6 +251,7 @@ class ApiTest(APITestCase):
         self.assertEqual(response.json(), {'detail': _(f'Tag {tag_id} updated'), 'data': {
             'id': self.tag_base.id,
             'name': data.get('name'),
+            'count': Task.objects.filter(tags=self.tag_base).count(),
             'created': f"{datetime.strftime(self.tag_base.created, '%Y-%m-%dT%H:%M:%S.%f')[:-3]}Z"
         }})
 
@@ -354,6 +359,7 @@ class ApiTest(APITestCase):
             'tags': [{
                 'id': self.tag_base.id,
                 'name': self.tag_base.name,
+                'count': Task.objects.filter(tags=self.tag_base).count(),
                 'created': f"{self.tag_base.created.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3]}Z"}]})
 
     def test_task_full_update(self):

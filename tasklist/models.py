@@ -1,4 +1,5 @@
 from django.db import models
+from django.dispatch import receiver
 from django.utils.translation import gettext as _
 
 
@@ -73,9 +74,16 @@ class Task(models.Model):
     def __str__(self):
         return self.title
 
-    # def save(self, *args, **kwargs):
-    #     self.slug = slugify(self.title)
-    #     super().save(*args, **kwargs)
 
-    def status_display(self):
-        return self.get_status_display()
+@receiver(models.signals.m2m_changed, sender=Task.tags.through)
+def change_users(signal, sender, instance, action, pk_set, **kwargs):
+    """
+    Save total tags per task, using signal after change tags many to many
+    """
+    tags = instance.tags.all()
+    for tag in tags:
+        if action == 'pre_remove':
+            tag.count = Task.objects.filter(tags=tag).count() - 1
+        else:
+            tag.count = Task.objects.filter(tags=tag).count()
+        tag.save(update_fields=['count'])
