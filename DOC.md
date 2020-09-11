@@ -16,7 +16,14 @@ Is recommended to run the project:
 `cd ~/ && virtualenv tasklist && mkdir tasklist/src && cd tasklist/src`
 
 #### Clone the Project
+
+GIT
+
 `git clone git@bitbucket.org:allanjuliani/backend-challenge.git`
+
+SSH
+
+`git clone https://allanjuliani@bitbucket.org/allanjuliani/backend-challenge.git`
 
 #### Activate Virtualenv
 `source ~/tasklist/bin/activate`
