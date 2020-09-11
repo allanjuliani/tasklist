@@ -21,4 +21,4 @@ class TagForm(forms.ModelForm):
     class Meta:
         model = Tag
         widgets = {}
-        fields = '__all__'
+        fields = ('name',)
