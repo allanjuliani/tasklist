@@ -2,20 +2,21 @@
 
 Is recommended to run the project:
 
-- Ubuntu 20.04
+- Ubuntu 18.08 or later
 - Python 3.6 or later
 - MySQL 5.6 or later or SQLite 3.24 or later
 
-#### Ubuntu Dependencies
+#### Ubuntu 18 Dependencies
+`sudo apt-get install git python-virtualenv memcached libxml2-dev libxslt1-dev libevent-dev python-dev python3-dev libsasl2-dev libmysqlclient-dev libjpeg-dev libffi-dev libssl-dev -y` 
 
-`sudo apt-get install git python-virtualenv memcached libxml2-dev libxslt1-dev libevent-dev python-dev python3-dev libsasl2-dev libmysqlclient-dev libjpeg-dev libffi-dev libssl-dev -y`
-`sudo apt-get install git python3-dev python3-virtualenv`
+#### Ubuntu 20 Dependencies
+`sudo apt-get install git python3-virtualenv memcached libxml2-dev libxslt1-dev libevent-dev python3-dev libsasl2-dev libmysqlclient-dev libjpeg-dev libffi-dev libssl-dev -y` 
 
 #### Create the Virtualenv
 `cd ~/ && virtualenv tasklist && mkdir tasklist/src && cd tasklist/src`
 
 #### Clone the Project
-`--git clone https://github.com/allanjuliani/wishlist.git`
+`git clone git@bitbucket.org:allanjuliani/backend-challenge.git`
 
 #### Activate Virtualenv
 `source ~/tasklist/bin/activate`
@@ -28,9 +29,32 @@ Is recommended to run the project:
 
 Default is set SQLite. If you want to use MySQL, create the database:
 
-`CREATE DATABASE wishlist CHARACTER SET utf8 COLLATE utf8_general_ci;`
+```sql
+OCREATE DATABASE tasklist CHARACTER SET utf8 COLLATE utf8_general_ci;
+```
 
-Comment the lines 83 to 86 and uncomment the lines 88 to 97 on settings.py. Fill the default settings with your database configurations.  
+On settings.py, fill the default settings with your database configurations.  
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'tasklist.sqlite3',
+    }
+    # CREATE DATABASE tasklist CHARACTER SET utf8 COLLATE utf8_general_ci;
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'HOST': 'localhost',
+    #     'NAME': 'tasklist',
+    #     'USER': 'tasklist',
+    #     'PASSWORD': '#S3nh4@Gr4nd3!N1ngu3m&Qu3br4.',
+    #     'OPTIONS': {
+    #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+    #     }
+    # },
+}
+```
+#### Run the migrations
 
 `./manage.py migrate`
 
@@ -192,12 +216,12 @@ DONE = 3
 - Content-Type: application/json
 
 #### Load Tasks
-- GET /api/product/[task_id]/
+- GET /api/task/[task_id]/
 - Authorization: Token [TOKEN_GENERATED]
 - Content-Type: application/json
 
 #### Edit Task
-- PUT /api/product/[task_id]/
+- PUT /api/task/[task_id]/
 - Authorization: Token [TOKEN_GENERATED]
 - Content-Type: application/json
 ```json
@@ -214,7 +238,7 @@ DONE = 3
 ```
 
 #### Partial Edit Task
-- PATCH /api/product/[task_id]/
+- PATCH /api/task/[task_id]/
 - Authorization: Token [TOKEN_GENERATED]
 - Content-Type: application/json
 ```json
@@ -225,6 +249,6 @@ DONE = 3
 ```
 
 #### Delete Task
-- DELETE /api/product/[task_id]/
+- DELETE /api/task/[task_id]/
 - Authorization: Token [TOKEN_GENERATED]
 - Content-Type: application/json

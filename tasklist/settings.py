@@ -82,6 +82,17 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'tasklist.sqlite3',
     }
+    # CREATE DATABASE tasklist CHARACTER SET utf8 COLLATE utf8_general_ci;
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'HOST': 'localhost',
+    #     'NAME': 'tasklist',
+    #     'USER': 'tasklist',
+    #     'PASSWORD': '#S3nh4@Gr4nd3!N1ngu3m&Qu3br4.',
+    #     'OPTIONS': {
+    #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+    #     }
+    # },
 }
 
 
