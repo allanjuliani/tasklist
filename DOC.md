@@ -13,6 +13,13 @@ Is recommended to run the project:
 `sudo apt-get install git python3-virtualenv memcached libxml2-dev libxslt1-dev libevent-dev python3-dev libsasl2-dev libmysqlclient-dev libjpeg-dev libffi-dev libssl-dev -y` 
 
 #### Create the Virtualenv
+
+Ubuntu 18
+
+`cd ~/ && virtualenv tasklist --python=/usr/bin/python3 && mkdir tasklist/src && cd tasklist/src`
+
+Ubuntu 20
+
 `cd ~/ && virtualenv tasklist && mkdir tasklist/src && cd tasklist/src`
 
 #### Clone the Project
@@ -26,6 +33,7 @@ SSH
 `git clone https://allanjuliani@bitbucket.org/allanjuliani/backend-challenge.git tasklist`
 
 #### Activate Virtualenv
+
 `source ~/tasklist/bin/activate`
 
 #### Install Python Dependencies
