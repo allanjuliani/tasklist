@@ -208,7 +208,8 @@ DONE = 3
     "priority": 3,
     "remind_me_on": "2020-09-10 13:00:00",
     "activity_type": 2,
-    "status": 2
+    "status": 2,
+    "tags": [1, 2]
 }
 ```
 
