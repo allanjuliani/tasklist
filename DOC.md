@@ -203,21 +203,21 @@ DONE = 3
 ```
 
 #### Show Tasks
-```
+```json
 GET /api/task/
 Authorization: Token [TOKEN_GENERATED]
 Content-Type: application/json
 ```
 
 #### Load Tasks
-```
+```json
 GET /api/product/[task_id]/
 Authorization: Token [TOKEN_GENERATED]
 Content-Type: application/json
 ```
 
 #### Edit Task
-```
+```json
 PUT /api/product/[task_id]/
 Authorization: Token [TOKEN_GENERATED]
 Content-Type: application/json
