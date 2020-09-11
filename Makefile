@@ -4,7 +4,7 @@ SITE=tasklist
 start_br:
 	@./manage.py runserver 0.0.0.0:$(PORT) --settings=$(SITE).settings_pt_br &
 
-start_en:
+start:
 	@./manage.py runserver 0.0.0.0:$(PORT) --settings=$(SITE).settings &>/dev/null &
 
 translate_br:
