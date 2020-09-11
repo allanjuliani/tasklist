@@ -75,84 +75,70 @@ to stop
 ## The REST API
 
 #### Add List
-```
-POST /api/list/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
-
+- POST /api/list/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+```json
 {
   "name": "List Name"
 }
 ```
 
 #### Show Lists
-```
-GET /api/list/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
-```
+- GET /api/list/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
 
 #### Load List
-```
-GET /api/list/[list_id]/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
-```
+- GET /api/list/[list_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
 
 #### Edit List
-```
-PUT /api/list/[list_id]/
-PATCH /api/list/[list_id]/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
-
+PUT and PATCH are the same because there is just one field
+- PUT /api/list/[list_id]/
+- PATCH /api/list/[list_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+```json
 {
     "name": "The New Name"
 }
-
 ```
 
 #### Delete List
-```
-DELETE /api/list/[list_id]/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
-```
+- DELETE /api/list/[list_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
 
-#### Add Tag - Important to add two!
-```
-POST /api/tag/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
-
-# Add Tag A and Tag B
+#### Add Tag
+Important to add two tags!
+- POST /api/tag/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+```json
 {
   "name": "Tag A"
 }
-
 ```
 
 #### Show Tags
-```
-GET /api/tag/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
-```
+- GET /api/tag/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
 
 #### Load Tag
-```
-GET /api/tag/[list_id]/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
-```
+- GET /api/tag/[list_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
 
 #### Edit Tag
+PUT and PATCH are the same because there is just one field
+- PUT /api/tag/[list_id]/
+- PATCH /api/tag/[list_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
 ```
-PUT /api/tag/[list_id]/
-PATCH /api/tag/[list_id]/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
-
 {
     "name": "The New Name"
 }
@@ -160,11 +146,9 @@ Content-Type: application/json
 ```
 
 #### Delete Tag
-```
-DELETE /api/tag/[tag_id]/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
-```
+- DELETE /api/tag/[tag_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
 
 #### Add Task
 
@@ -185,11 +169,10 @@ DOING = 2
 DONE = 3
 ```
 
+- POST /api/task/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
 ```json
-// POST /api/task/
-// Authorization: Token [TOKEN_GENERATED]
-// Content-Type: application/json
-
 {
     "title": "Example Task",
     "list": 1,
@@ -203,25 +186,20 @@ DONE = 3
 ```
 
 #### Show Tasks
-```json
-GET /api/task/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
-```
+- GET /api/task/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
 
 #### Load Tasks
-```json
-GET /api/product/[task_id]/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
-```
+- GET /api/product/[task_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
 
 #### Edit Task
+- PUT /api/product/[task_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
 ```json
-PUT /api/product/[task_id]/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
-
 {
     "title": "Example Edited",
     "list": 1,
@@ -234,11 +212,10 @@ Content-Type: application/json
 ```
 
 #### Partial Edit Task
-```
-PATCH /api/product/[task_id]/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
-
+- PATCH /api/product/[task_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+```json
 {
     "title": "Works with any field",
     "status": 3
@@ -246,8 +223,6 @@ Content-Type: application/json
 ```
 
 #### Delete Task
-```
-DELETE /api/product/[task_id]/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
-```
+- DELETE /api/product/[task_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
