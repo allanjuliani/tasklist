@@ -30,7 +30,7 @@ Is recommended to run the project:
 Default is set SQLite. If you want to use MySQL, create the database:
 
 ```sql
-OCREATE DATABASE tasklist CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE tasklist CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
 
 On settings.py, fill the default settings with your database configurations.  
