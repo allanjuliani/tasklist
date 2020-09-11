@@ -96,6 +96,7 @@ to stop
 
 #### Edit List
 PUT and PATCH are the same because there is just one field
+
 - PUT /api/list/[list_id]/
 - PATCH /api/list/[list_id]/
 - Authorization: Token [TOKEN_GENERATED]
@@ -113,6 +114,7 @@ PUT and PATCH are the same because there is just one field
 
 #### Add Tag
 Important to add two tags!
+
 - POST /api/tag/
 - Authorization: Token [TOKEN_GENERATED]
 - Content-Type: application/json
@@ -134,6 +136,7 @@ Important to add two tags!
 
 #### Edit Tag
 PUT and PATCH are the same because there is just one field
+
 - PUT /api/tag/[list_id]/
 - PATCH /api/tag/[list_id]/
 - Authorization: Token [TOKEN_GENERATED]
@@ -151,7 +154,6 @@ PUT and PATCH are the same because there is just one field
 - Content-Type: application/json
 
 #### Add Task
-
 Fields:
 ```python
 # Priority
@@ -168,7 +170,6 @@ OPEN = 1
 DOING = 2
 DONE = 3
 ```
-
 - POST /api/task/
 - Authorization: Token [TOKEN_GENERATED]
 - Content-Type: application/json
