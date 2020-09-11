@@ -167,10 +167,28 @@ Content-Type: application/json
 ```
 
 #### Add Task
+
+Fields:
+```python
+# Priority
+LOW = 1
+MEDIUM = 2
+HIGH = 3
+
+# Activity Type
+INDOOR = 1
+OUTDOOR = 2
+
+# Status
+OPEN = 1
+DOING = 2
+DONE = 3
 ```
-POST /api/task/
-Authorization: Token [TOKEN_GENERATED]
-Content-Type: application/json
+
+```json
+// POST /api/task/
+// Authorization: Token [TOKEN_GENERATED]
+// Content-Type: application/json
 
 {
     "title": "Example Task",
@@ -179,7 +197,8 @@ Content-Type: application/json
     "priority": 1,
     "remind_me_on": "2020-09-09 01:01:01",
     "activity_type": 1,
-    "status": 1
+    "status": 1,
+    "tags": [1, 2]
 }
 ```
 
