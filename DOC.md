@@ -19,11 +19,11 @@ Is recommended to run the project:
 
 GIT
 
-`git clone git@bitbucket.org:allanjuliani/backend-challenge.git`
+`git clone git@bitbucket.org:allanjuliani/backend-challenge.git tasklist`
 
 SSH
 
-`git clone https://allanjuliani@bitbucket.org/allanjuliani/backend-challenge.git`
+`git clone https://allanjuliani@bitbucket.org/allanjuliani/backend-challenge.git tasklist`
 
 #### Activate Virtualenv
 `source ~/tasklist/bin/activate`
