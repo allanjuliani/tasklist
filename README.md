@@ -1,56 +1,269 @@
-### O desafio
-O objetivo desse desafio é apresentar seus conhecimentos em (Python3, NodeJS ou .Net Core) sobre APIs RestFULL, operações com bancos de dados, uso de arquivo de configuração, testes automatizados com cobertura, logging, controle de versões, documentação de código e de uso e estrutura/qualidade de código.
+## How to install
 
-A aplicação a ser desenvolvida será o backend para gerenciar listas de tarefas.
+Is recommended to run the project:
 
-Ela deve ser constuída em (Python, NodeJS ou .Net Core) e você pode utilizar um framework e o banco de dados de sua preferência.
+- Ubuntu 18.08 or later
+- Python 3.6 or later
+- MySQL 5.6 or later or SQLite 3.24 or later
 
-A API deve conter os seguintes endpoints:
+#### Ubuntu 18 Dependencies
+`sudo apt-get install git python-virtualenv memcached libxml2-dev libxslt1-dev libevent-dev python-dev python3-dev libsasl2-dev libmysqlclient-dev libjpeg-dev libffi-dev libssl-dev make -y` 
 
-- **/taskList**: retorna todas as lista cadastradas e permite criar uma nova lista. Cada lista possui zero ou mais tarefas.
-- **/taskList/id**: permite a edição, alteração e remoção de uma lista específica
-- **/tasks**: retorna todas as tarefas de uma lista e permite criar uma nova tarefa. Cada tarefa esta sempre associada à uma lista.
-- **/tasks/id**: permite a edição, alteração e remoção de uma tarefa
-- **/tags**: retorna todas as tags cadastradas. Cada tag pode estar associada à uma ou mais tarefas.
-- **/tags/id**: permite a edição, alteração e remoção de uma tag.
+#### Ubuntu 20 Dependencies
+`sudo apt-get install git python3-virtualenv memcached libxml2-dev libxslt1-dev libevent-dev python3-dev libsasl2-dev libmysqlclient-dev libjpeg-dev libffi-dev libssl-dev make -y` 
 
-Para assegurar a correta comunicação com um hipotético aplicativo em frontend que gerenciará as tasks, o seguinte contrato de API deve ser seguido para cada model:
+#### Create the Virtualenv
 
-- TaskLists
-    - Id: uuid
-    - Name: string
+Ubuntu 18
 
-- Tags
-    - Id: uuid
-    - Name: string
-    - Count: int (O número de tasks utilizando a tag)
+`cd ~/ && virtualenv tasklist --python=/usr/bin/python3 && mkdir tasklist/src && cd tasklist/src`
 
-- Tasks
-    - Id: uuid
-    - Title: string
-    - Notes: string
-    - Priority: integer
-    - RemindMeOn: date
-    - ActivityType: string (indoors, outdoors)
-    - Status: string (open, done)
-    - TaskList: uuid
-    - Tags: list
+Ubuntu 20
 
-### O que esperamos de você:
+`cd ~/ && virtualenv tasklist && mkdir tasklist/src && cd tasklist/src`
 
-- Utilize os verbos HTTP (GET, POST, PUT, PATCH, DELETE) corretamente
-- Retorne estados HTTP coerentes (200, 404 etc)
-- Escreva testes e apresente o relatório de cobertura dos mesmos, afinal precisamos garantir o funcionamento e a qualidade :)
-- Escreva documentação do código, suas funções e assinaturas
-- Crie logs com classificações (INFO, WARN, ERROR, DEBUG) coerentes
-- Utilize virtualização e ferramenta de controle de dependências
-- Pense no histórico de remoções (Solução para manter dados históricos deletados; Dados deletados deverão ser preservados)
-- Aderência aos padrões de qualidade de código vigentes na comunidade
+#### Clone the Project
 
-### Diferenciais:
+GIT
 
-- Aplicação rodando em ambiente Docker
+`git clone git@bitbucket.org:allanjuliani/backend-challenge.git tasklist`
 
-### Entrega:
+SSH
 
-- Faça um fork deste repositório para sua conta pessoal no bitbucket, se certifique de que esteja público, e quando finalizar, responda no e-mail do desafio com o link do seu repositório.
+`git clone https://allanjuliani@bitbucket.org/allanjuliani/backend-challenge.git tasklist`
+
+#### Activate Virtualenv
+
+`source ~/tasklist/bin/activate`
+
+#### Install Python Dependencies
+
+`cd ~/tasklist/src/tasklist && pip install -r requirements.txt`
+
+#### Install Database
+
+Default is set SQLite. If you want to use MySQL, create the database:
+
+```sql
+CREATE DATABASE tasklist CHARACTER SET utf8 COLLATE utf8_general_ci;
+```
+
+On settings.py, fill the default settings with your database configurations.  
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'tasklist.sqlite3',
+    }
+    # CREATE DATABASE tasklist CHARACTER SET utf8 COLLATE utf8_general_ci;
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'HOST': 'localhost',
+    #     'NAME': 'tasklist',
+    #     'USER': 'tasklist',
+    #     'PASSWORD': '#S3nh4@Gr4nd3!N1ngu3m&Qu3br4.',
+    #     'OPTIONS': {
+    #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+    #     }
+    # },
+}
+```
+#### Run the migrations
+
+`./manage.py migrate`
+
+#### Create admin user
+
+`./manage.py createsuperuser`
+
+#### Create API Token to your user
+
+`./manage.py drf_create_token [your user]`
+
+#### Test the application
+
+`./manage.py test`
+
+or
+
+`make test`
+
+#### Running the application
+
+`./manage.py runserver 0.0.0.0:8000` 
+
+or, start in english
+
+`make start` 
+
+start in portuguese
+
+`make start_br`
+
+to stop
+
+`make stop`
+
+#### Logging
+`tail -f tasklist.log`
+
+#### Admin URL to access on browser
+`http://localhost:8000/admin/`
+
+## The REST API
+
+#### Add List
+- POST /api/list/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+```json
+{
+  "name": "List Name"
+}
+```
+
+#### Show Lists
+- GET /api/list/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+
+#### Load List
+- GET /api/list/[list_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+
+#### Edit List
+PUT and PATCH are the same because there is just one field
+
+- PUT /api/list/[list_id]/
+- PATCH /api/list/[list_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+```json
+{
+    "name": "The New Name"
+}
+```
+
+#### Delete List
+- DELETE /api/list/[list_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+
+#### Add Tag
+Important to add two tags!
+
+- POST /api/tag/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+```json
+{
+  "name": "Tag A"
+}
+```
+
+#### Show Tags
+- GET /api/tag/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+
+#### Load Tag
+- GET /api/tag/[list_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+
+#### Edit Tag
+PUT and PATCH are the same because there is just one field
+
+- PUT /api/tag/[list_id]/
+- PATCH /api/tag/[list_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+```
+{
+    "name": "The New Name"
+}
+
+```
+
+#### Delete Tag
+- DELETE /api/tag/[tag_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+
+#### Add Task
+Fields:
+```python
+# Priority
+LOW = 1
+MEDIUM = 2
+HIGH = 3
+
+# Activity Type
+INDOOR = 1
+OUTDOOR = 2
+
+# Status
+OPEN = 1
+DOING = 2
+DONE = 3
+```
+- POST /api/task/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+```json
+{
+    "title": "Example Task",
+    "list": 1,
+    "notes": "This is an example",
+    "priority": 1,
+    "remind_me_on": "2020-09-09 01:01:01",
+    "activity_type": 1,
+    "status": 1,
+    "tags": [1, 2]
+}
+```
+
+#### Show Tasks
+- GET /api/task/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+
+#### Load Tasks
+- GET /api/task/[task_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+
+#### Edit Task
+- PUT /api/task/[task_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+```json
+{
+    "title": "Example Edited",
+    "list": 1,
+    "notes": "This is an fully edited example",
+    "priority": 3,
+    "remind_me_on": "2020-09-10 13:00:00",
+    "activity_type": 2,
+    "status": 2,
+    "tags": [1, 2]
+}
+```
+
+#### Partial Edit Task
+- PATCH /api/task/[task_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
+```json
+{
+    "title": "Works with any field",
+    "status": 3
+}
+```
+
+#### Delete Task
+- DELETE /api/task/[task_id]/
+- Authorization: Token [TOKEN_GENERATED]
+- Content-Type: application/json
