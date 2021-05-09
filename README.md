@@ -1,115 +1,100 @@
-## How to install
+# Django tasklist
 
-Is recommended to run the project:
+## Using Docker
 
-- Ubuntu 18.08 or later
-- Python 3.6 or later
-- MySQL 5.6 or later or SQLite 3.24 or later
+### Install Docker
 
-#### Ubuntu 18 Dependencies
-`sudo apt-get install git python-virtualenv memcached libxml2-dev libxslt1-dev libevent-dev python-dev python3-dev libsasl2-dev libmysqlclient-dev libjpeg-dev libffi-dev libssl-dev make -y` 
+https://docs.docker.com/engine/install/
 
-#### Ubuntu 20 Dependencies
-`sudo apt-get install git python3-virtualenv memcached libxml2-dev libxslt1-dev libevent-dev python3-dev libsasl2-dev libmysqlclient-dev libjpeg-dev libffi-dev libssl-dev make -y` 
+### Build project
+```commandline
+make build
+```
+
+### Start project
+```commandline
+make up
+```
+
+### Run tests
+```commandline
+make tests
+```
+
+### Create superuser for admin
+```commandline
+make createsuperuser
+```
+
+### Create token to rest api
+```commandline
+make createtoken username=[YOUR_USER]
+```
+
+#### Admin URL to access on browser
+http://localhost/admin/
+
+#### Remove
+```commandline
+make tasklist-remove
+make tasklist-clean
+```
+
+### Without Docker
+
+#### Ubuntu Dependencies
+```commandline
+sudo apt-get install git python-virtualenv memcached libxml2-dev libxslt1-dev libevent-dev python-dev python3-dev libsasl2-dev libmysqlclient-dev libjpeg-dev libffi-dev libssl-dev -y
+```
 
 #### Create the Virtualenv
-
-Ubuntu 18
-
-`cd ~/ && virtualenv tasklist --python=/usr/bin/python3 && mkdir tasklist/src && cd tasklist/src`
-
-Ubuntu 20
-
-`cd ~/ && virtualenv tasklist && mkdir tasklist/src && cd tasklist/src`
-
-#### Clone the Project
-
-GIT
-
-`git clone git@bitbucket.org:allanjuliani/backend-challenge.git tasklist`
-
-SSH
-
-`git clone https://allanjuliani@bitbucket.org/allanjuliani/backend-challenge.git tasklist`
+```commandline
+virtualenv venv
+```
 
 #### Activate Virtualenv
-
-`source ~/tasklist/bin/activate`
+```commandline
+source venv/bin/activate
+```
 
 #### Install Python Dependencies
 
-`cd ~/tasklist/src/tasklist && pip install -r requirements.txt`
+```commandline
+pip install -r requirements.txt
+```
 
 #### Install Database
 
-Default is set SQLite. If you want to use MySQL, create the database:
-
-```sql
-CREATE DATABASE tasklist CHARACTER SET utf8 COLLATE utf8_general_ci;
+```commandline
+./manage.py migrate --settings=tasklist.settings_dev
 ```
-
-On settings.py, fill the default settings with your database configurations.  
-
-```python
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'tasklist.sqlite3',
-    }
-    # CREATE DATABASE tasklist CHARACTER SET utf8 COLLATE utf8_general_ci;
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'HOST': 'localhost',
-    #     'NAME': 'tasklist',
-    #     'USER': 'tasklist',
-    #     'PASSWORD': '#S3nh4@Gr4nd3!N1ngu3m&Qu3br4.',
-    #     'OPTIONS': {
-    #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-    #     }
-    # },
-}
-```
-#### Run the migrations
-
-`./manage.py migrate`
 
 #### Create admin user
 
-`./manage.py createsuperuser`
+```commandline
+./manage.py createsuperuser --settings=tasklist.settings_dev
+```
 
 #### Create API Token to your user
 
-`./manage.py drf_create_token [your user]`
+```commandline
+./manage.py drf_create_token [YOUR_USER] --settings=tasklist.settings_dev
+```
 
 #### Test the application
 
-`./manage.py test`
-
-or
-
-`make test`
+```commandline
+./manage.py test --settings=tasklist.settings_dev
+```
 
 #### Running the application
 
-`./manage.py runserver 0.0.0.0:8000` 
-
-or, start in english
-
-`make start` 
-
-start in portuguese
-
-`make start_br`
-
-to stop
-
-`make stop`
-
-#### Logging
-`tail -f tasklist.log`
+```commandline
+./manage.py runserver 0.0.0.0:8000 --settings=tasklist.settings_dev
+```
 
 #### Admin URL to access on browser
-`http://localhost:8000/admin/`
+http://localhost:8000/admin/
 
 ## The REST API
 
