@@ -1,4 +1,4 @@
-# Django tasklist
+# Django Tasklist
 
 ## Using Docker
 
