@@ -1,7 +1,7 @@
 from django.utils.translation import gettext as _
 
-from tasklist.forms import ListForm, TaskForm, TagForm
-from tasklist.models import List, Task, Tag
+from tasklist.forms import ListForm, TagForm, TaskForm
+from tasklist.models import List, Tag, Task
 
 
 def list_create(request_body):
@@ -165,23 +165,25 @@ def task_list():
     # Get the query set as dick and insert into a list
     context = []
     for task in Task.objects.select_related('list').all():
-        context.append({
-            'id': task.id,
-            'list_id': task.list_id,
-            'list': task.list.name,
-            'title': task.title,
-            'notes': task.notes,
-            'priority_id': task.priority,
-            'priority': task.get_priority_display(),
-            'remind_me_on': task.remind_me_on,
-            'activity_type_id': task.activity_type,
-            'activity_type': task.get_activity_type_display(),
-            'status_id': task.status,
-            'status': task.get_status_display(),
-            'created': task.created.strftime('%Y-%m-%d %H:%M:%S'),
-            'updated': task.updated,
-            'tags': [entry for entry in task.tags.values()]
-        })
+        context.append(
+            {
+                'id': task.id,
+                'list_id': task.list_id,
+                'list': task.list.name,
+                'title': task.title,
+                'notes': task.notes,
+                'priority_id': task.priority,
+                'priority': task.get_priority_display(),
+                'remind_me_on': task.remind_me_on,
+                'activity_type_id': task.activity_type,
+                'activity_type': task.get_activity_type_display(),
+                'status_id': task.status,
+                'status': task.get_status_display(),
+                'created': task.created.strftime('%Y-%m-%d %H:%M:%S'),
+                'updated': task.updated,
+                'tags': [entry for entry in task.tags.values()],
+            }
+        )
     return 200, context
 
 
@@ -212,14 +214,16 @@ def task_view(task_id):
             'notes': task.notes,
             'priority_id': task.priority,
             'priority': task.get_priority_display(),
-            'remind_me_on': task.remind_me_on.astimezone().strftime('%Y-%m-%d %H:%M:%S'),
+            'remind_me_on': task.remind_me_on.astimezone().strftime(
+                '%Y-%m-%d %H:%M:%S'
+            ),
             'activity_type_id': task.activity_type,
             'activity_type': task.get_activity_type_display(),
             'status_id': task.status,
             'status': task.get_status_display(),
             'created': task.created.astimezone().strftime('%Y-%m-%d %H:%M:%S'),
             'updated': task.updated.astimezone().strftime('%Y-%m-%d %H:%M:%S'),
-            'tags': [entry for entry in task.tags.values()]
+            'tags': [entry for entry in task.tags.values()],
         }
     else:
         return 404, {'detail': _('Task not found')}

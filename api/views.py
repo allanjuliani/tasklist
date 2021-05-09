@@ -1,15 +1,15 @@
 import json
-
 from json import JSONDecodeError
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import IsAuthenticated
 
 from django.http import JsonResponse
 from django.utils.translation import gettext as _
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
 
-from tasklist.utils import list_create, list_list, list_delete, list_view, list_update
-from tasklist.utils import task_create, task_list, task_delete, task_view, task_update
-from tasklist.utils import tag_create, tag_list, tag_delete, tag_view, tag_update
+from tasklist.utils import (list_create, list_delete, list_list, list_update,
+                            list_view, tag_create, tag_delete, tag_list,
+                            tag_update, tag_view, task_create, task_delete,
+                            task_list, task_update, task_view)
 
 
 @api_view(['POST', 'GET'])

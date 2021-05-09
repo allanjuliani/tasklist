@@ -36,6 +36,7 @@ class Task(models.Model):
     better to be small integer fields with Django Choices.
     I also think that in a real system, would be necessary to set a index for these fields, in case we have Reports.
     """
+
     class Priority(models.IntegerChoices):
         LOW = 1, _('Low')
         MEDIUM = 2, _('Medium')
@@ -53,11 +54,19 @@ class Task(models.Model):
     list = models.ForeignKey(List, verbose_name=_('List'), on_delete=models.CASCADE)
     title = models.CharField(_('Title'), max_length=128)
     notes = models.CharField(_('Notes'), max_length=255)
-    priority = models.SmallIntegerField(_('Priority'), choices=Priority.choices, default=Priority.MEDIUM, db_index=True)
+    priority = models.SmallIntegerField(
+        _('Priority'), choices=Priority.choices, default=Priority.MEDIUM, db_index=True
+    )
     remind_me_on = models.DateTimeField(_('Remind me on'))
-    activity_type = models.SmallIntegerField(_('Activity Type'), choices=ActivityType.choices,
-                                             default=ActivityType.INDOOR, db_index=True)
-    status = models.SmallIntegerField(_('Status'), choices=Status.choices, default=Status.OPEN, db_index=True)
+    activity_type = models.SmallIntegerField(
+        _('Activity Type'),
+        choices=ActivityType.choices,
+        default=ActivityType.INDOOR,
+        db_index=True,
+    )
+    status = models.SmallIntegerField(
+        _('Status'), choices=Status.choices, default=Status.OPEN, db_index=True
+    )
     tags = models.ManyToManyField(Tag)
     created = models.DateTimeField(_('Created'), auto_now_add=True)
     updated = models.DateTimeField(_('Updated'), auto_now=True)
@@ -66,6 +75,7 @@ class Task(models.Model):
         """
         Unique together just allow create same Task name for different List
         """
+
         unique_together = (('list', 'title'),)
         db_table = 'task'
         verbose_name = _('Task')
