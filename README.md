@@ -6,6 +6,8 @@
 
 https://docs.docker.com/engine/install/
 
+https://docs.docker.com/compose/install/
+
 ### Build project
 ```commandline
 make build
